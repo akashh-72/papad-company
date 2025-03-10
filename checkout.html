@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Vaishali Sandage Papad Kendra</title>
+    <meta name="description" content="Complete your purchase at Vaishali Sandage Papad Kendra. Enter shipping and payment details to place your order for authentic Indian papads and sandage.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Vaishali Sandage</h1>
+                        <p class="tagline">Papad Kendra</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section section-padding">
+            <div class="container">
+                <div class="checkout-container">
+                    <div class="checkout-form-container">
+                        <form id="checkoutForm" class="checkout-form">
+                            <div class="form-section">
+                                <h2>Billing Details</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company Name (Optional)</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country / Region *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select a country</option>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="AU">Australia</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="streetAddress">Street Address *</label>
+                                    <input type="text" id="streetAddress" name="streetAddress" placeholder="House number and street name" required>
+                                    <input type="text" id="streetAddress2" name="streetAddress2" placeholder="Apartment, suite, unit, etc. (optional)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Town / City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State *</label>
+                                    <input type="text" id="state" name="state" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postcode">Postcode / ZIP *</label>
+                                    <input type="text" id="postcode" name="postcode" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="createAccount" name="createAccount">
+                                    <label for="createAccount">Create an account?</label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="shipDifferent" name="shipDifferent">
+                                    <label for="shipDifferent">Ship to a different address?</label>
+                                </div>
+                                
+                                <div id="shippingAddressContainer" class="shipping-address-container" style="display: none;">
+                                    <!-- Shipping address fields will be shown when checkbox is checked -->
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="shipFirstName">First Name *</label>
+                                            <input type="text" id="shipFirstName" name="shipFirstName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="shipLastName">Last Name *</label>
+                                            <input type="text" id="shipLastName" name="shipLastName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipCompany">Company Name (Optional)</label>
+                                        <input type="text" id="shipCompany" name="shipCompany">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipCountry">Country / Region *</label>
+                                        <select id="shipCountry" name="shipCountry">
+                                            <option value="">Select a country</option>
+                                            <option value="IN">India</option>
+                                            <option value="US">United States</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="AU">Australia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipStreetAddress">Street Address *</label>
+                                        <input type="text" id="shipStreetAddress" name="shipStreetAddress" placeholder="House number and street name">
+                                        <input type="text" id="shipStreetAddress2" name="shipStreetAddress2" placeholder="Apartment, suite, unit, etc. (optional)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipCity">Town / City *</label>
+                                        <input type="text" id="shipCity" name="shipCity">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipState">State *</label>
+                                        <input type="text" id="shipState" name="shipState">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipPostcode">Postcode / ZIP *</label>
+                                        <input type="text" id="shipPostcode" name="shipPostcode">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <div class="form-group">
+                                    <label for="orderNotes">Order Notes (Optional)</label>
+                                    <textarea id="orderNotes" name="orderNotes" placeholder="Notes about your order, e.g. special delivery instructions"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h2>Your Order</h2>
+                        <div class="order-summary-content">
+                            <div class="order-summary-header">
+                                <span>Product</span>
+                                <span>Subtotal</span>
+                            </div>
+                            <div class="order-summary-items" id="orderSummaryItems">
+                                <!-- Order items will be dynamically added here -->
+                            </div>
+                            <div class="order-summary-row">
+                                <span>Subtotal</span>
+                                <span id="orderSubtotal">₹0.00</span>
+                            </div>
+                            <div class="order-summary-row">
+                                <span>Shipping</span>
+                                <span>Free Shipping</span>
+                            </div>
+                            <div class="order-summary-row">
+                                <span>Discount</span>
+                                <span id="orderDiscount">₹0.00</span>
+                            </div>
+                            <div class="order-summary-row total">
+                                <span>Total</span>
+                                <span id="orderTotal">₹0.00</span>
+                            </div>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="paymentCOD" name="paymentMethod" value="cod" checked>
+                                    <label for="paymentCOD">Cash on Delivery</label>
+                                    <div class="payment-description">
+                                        <p>Pay with cash upon delivery.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="paymentBank" name="paymentMethod" value="bank">
+                                    <label for="paymentBank">Direct Bank Transfer</label>
+                                    <div class="payment-description">
+                                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="paymentCard" name="paymentMethod" value="card">
+                                    <label for="paymentCard">Credit/Debit Card</label>
+                                    <div class="payment-description">
+                                        <p>Pay securely using your credit or debit card.</p>
+                                        <div class="card-icons">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group terms-checkbox">
+                                <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                                <label for="termsAgree">I have read and agree to the website <a href="terms.html">terms and conditions</a> *</label>
+                            </div>
+                            
+                            <button type="submit" class="btn primary-btn place-order-btn" id="placeOrderBtn">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Market Street, Pune, Maharashtra, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@vaishalipapads.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget business-hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <div class="payment-methods">
+                        <p>We Accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vaishali Sandage Papad Kendra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Subtotal: <span>₹0.00</span></p>
+            </div>
+            <a href="cart.html" class="btn primary-btn">View Cart</a>
+            <a href="checkout.html" class="btn secondary-btn">Checkout</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Get DOM elements
+            const orderSummaryItems = document.getElementById('orderSummaryItems');
+            const orderSubtotal = document.getElementById('orderSubtotal');
+            const orderDiscount = document.getElementById('orderDiscount');
+            const orderTotal = document.getElementById('orderTotal');
+            const shipDifferentCheckbox = document.getElementById('shipDifferent');
+            const shippingAddressContainer = document.getElementById('shippingAddressContainer');
+            const placeOrderBtn = document.getElementById('placeOrderBtn');
+            const checkoutForm = document.getElementById('checkoutForm');
+            
+            // Toggle shipping address form
+            if (shipDifferentCheckbox && shippingAddressContainer) {
+                shipDifferentCheckbox.addEventListener('change', function() {
+                    shippingAddressContainer.style.display = this.checked ? 'block' : 'none';
+                    
+                    // Toggle required attribute for shipping fields
+                    const shippingFields = shippingAddressContainer.querySelectorAll('input, select');
+                    shippingFields.forEach(field => {
+                        field.required = this.checked;
+                    });
+                });
+            }
+            
+            // Render order summary
+            function renderOrderSummary() {
+                if (!orderSummaryItems) return;
+                
+                // Clear existing items
+                orderSummaryItems.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    orderSummaryItems.innerHTML = '<div class="empty-order">Your cart is empty</div>';
+                    if (orderSubtotal) orderSubtotal.textContent = '₹0.00';
+                    if (orderDiscount) orderDiscount.textContent = '₹0.00';
+                    if (orderTotal) orderTotal.textContent = '₹0.00';
+                    return;
+                }
+                
+                let subtotal = 0;
+                
+                // Add each cart item to the order summary
+                cart.forEach(item => {
+                    const product = products.find(p => p.id === item.id);
+                    if (!product) return;
+                    
+                    const itemTotal = product.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    const orderItem = document.createElement('div');
+                    orderItem.className = 'order-item';
+                    orderItem.innerHTML = `
+                        <span>${product.name} × ${item.quantity}</span>
+                        <span>₹${itemTotal.toFixed(2)}</span>
+                    `;
+                    
+                    orderSummaryItems.appendChild(orderItem);
+                });
+                
+                // Update summary
+                const discount = 0; // No discount for now
+                const total = subtotal - discount;
+                
+                if (orderSubtotal) orderSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
+                if (orderDiscount) orderDiscount.textContent = `₹${discount.toFixed(2)}`;
+                if (orderTotal) orderTotal.textContent = `₹${total.toFixed(2)}`;
+            }
+            
+            // Handle form submission
+            if (placeOrderBtn && checkoutForm) {
+                placeOrderBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Check if cart is empty
+                    if (cart.length === 0) {
+                        showNotification('Your cart is empty. Add some products first.');
+                        return;
+                    }
+                    
+                    // Check if terms are agreed
+                    const termsAgree = document.getElementById('termsAgree');
+                    if (termsAgree && !termsAgree.checked) {
+                        showNotification('Please agree to the terms and conditions.');
+                        return;
+                    }
+                    
+                    // Validate form
+                    if (!checkoutForm.checkValidity()) {
+                        checkoutForm.reportValidity();
+                        return;
+                    }
+                    
+                    // Get form data
+                    const formData = new FormData(checkoutForm);
+                    const formValues = {};
+                    
+                    for (let [key, value] of formData.entries()) {
+                        formValues[key] = value;
+                    }
+                    
+                    // Get selected payment method
+                    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+                    formValues.paymentMethod = paymentMethod;
+                    
+                    // In a real application, you would send this data to a server
+                    // For now, we'll just simulate a successful order
+                    
+                    // Show loading state
+                    placeOrderBtn.disabled = true;
+                    placeOrderBtn.textContent = 'Processing...';
+                    
+                    // Simulate API call
+                    setTimeout(function() {
+                        // Clear cart
+                        localStorage.removeItem('cart');
+                        
+                        // Redirect to order confirmation page
+                        window.location.href = 'order-confirmation.html';
+                    }, 2000);
+                    
+                    // Log order data (for demonstration)
+                    console.log('Order placed with the following data:', {
+                        customer: formValues,
+                        items: cart,
+                        total: parseFloat(orderTotal.textContent.replace('₹', ''))
+                    });
+                });
+            }
+            
+            // Render order summary on page load
+            renderOrderSummary();
+        });
+    </script>
+</body>
+</html> 

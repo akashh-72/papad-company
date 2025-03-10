@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Vaishali Sandage Papad Kendra</title>
+    <meta name="description" content="View and manage your shopping cart at Vaishali Sandage Papad Kendra. Adjust quantities, remove items, and proceed to checkout.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Vaishali Sandage</h1>
+                        <p class="tagline">Papad Kendra</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Cart</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart-section section-padding">
+            <div class="container">
+                <div class="cart-container">
+                    <div class="cart-items-table">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartTableBody">
+                                <!-- Cart items will be dynamically added here -->
+                            </tbody>
+                        </table>
+                        <div class="empty-cart-message" id="emptyCartMessage">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Looks like you haven't added any products to your cart yet.</p>
+                            <a href="products.html" class="btn primary-btn">Continue Shopping</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <div class="coupon-section">
+                            <h3>Coupon Code</h3>
+                            <div class="coupon-form">
+                                <input type="text" placeholder="Enter coupon code">
+                                <button class="btn secondary-btn">Apply Coupon</button>
+                            </div>
+                        </div>
+                        <div class="cart-update">
+                            <button class="btn secondary-btn" id="updateCartBtn">Update Cart</button>
+                            <a href="products.html" class="btn text-btn">Continue Shopping <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary" id="cartSummary">
+                        <h3>Cart Summary</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cartSubtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Discount</span>
+                            <span id="cartDiscount">₹0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="cartTotal">₹0.00</span>
+                        </div>
+                        <a href="checkout.html" class="btn primary-btn checkout-btn" id="checkoutBtn">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- You May Also Like Section -->
+        <section class="related-products section-padding bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>You May Also Like</h2>
+                    <p>Products you might be interested in</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/methi-papad.jpg" alt="Methi Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Methi Papad</h3>
+                            <p class="product-desc">Infused with fenugreek for unique flavor</p>
+                            <div class="product-purchase">
+                                <p class="price">₹140.00</p>
+                                <button class="add-to-cart" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/moong-papad.jpg" alt="Moong Dal Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Moong Dal Papad</h3>
+                            <p class="product-desc">Light and crispy papad made from moong dal</p>
+                            <div class="product-purchase">
+                                <p class="price">₹130.00</p>
+                                <button class="add-to-cart" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/cumin-sandage.jpg" alt="Cumin Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Cumin Sandage</h3>
+                            <p class="product-desc">Sandage with aromatic cumin seeds</p>
+                            <div class="product-purchase">
+                                <p class="price">₹160.00</p>
+                                <button class="add-to-cart" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/plain-sandage.jpg" alt="Plain Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Plain Sandage</h3>
+                            <p class="product-desc">Traditional plain sandage with authentic taste</p>
+                            <div class="product-purchase">
+                                <p class="price">₹150.00</p>
+                                <button class="add-to-cart" data-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Market Street, Pune, Maharashtra, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@vaishalipapads.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget business-hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <div class="payment-methods">
+                        <p>We Accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vaishali Sandage Papad Kendra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Subtotal: <span>₹0.00</span></p>
+            </div>
+            <a href="cart.html" class="btn primary-btn">View Cart</a>
+            <a href="checkout.html" class="btn secondary-btn">Checkout</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Get DOM elements
+            const cartTableBody = document.getElementById('cartTableBody');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            const cartSummary = document.getElementById('cartSummary');
+            const cartSubtotal = document.getElementById('cartSubtotal');
+            const cartDiscount = document.getElementById('cartDiscount');
+            const cartTotal = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            const updateCartBtn = document.getElementById('updateCartBtn');
+            
+            // Render cart items
+            function renderCartItems() {
+                if (cart.length === 0) {
+                    // Show empty cart message
+                    if (cartTableBody) cartTableBody.innerHTML = '';
+                    if (emptyCartMessage) emptyCartMessage.style.display = 'flex';
+                    if (cartSummary) cartSummary.style.display = 'none';
+                    if (updateCartBtn) updateCartBtn.style.display = 'none';
+                    return;
+                }
+                
+                // Hide empty cart message and show cart summary
+                if (emptyCartMessage) emptyCartMessage.style.display = 'none';
+                if (cartSummary) cartSummary.style.display = 'block';
+                if (updateCartBtn) updateCartBtn.style.display = 'inline-block';
+                
+                // Clear existing items
+                if (cartTableBody) cartTableBody.innerHTML = '';
+                
+                let subtotal = 0;
+                
+                // Add each cart item to the table
+                cart.forEach(item => {
+                    const product = products.find(p => p.id === item.id);
+                    if (!product) return;
+                    
+                    const itemTotal = product.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    const cartRow = document.createElement('tr');
+                    cartRow.className = 'cart-item';
+                    cartRow.innerHTML = `
+                        <td class="product-info">
+                            <div class="product-image">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="product-name">
+                                <h4>${product.name}</h4>
+                                <p>${product.description}</p>
+                            </div>
+                        </td>
+                        <td class="product-price">₹${product.price.toFixed(2)}</td>
+                        <td class="product-quantity">
+                            <div class="quantity-control">
+                                <button class="quantity-btn decrease" data-id="${product.id}">-</button>
+                                <input type="number" value="${item.quantity}" min="1" data-id="${product.id}">
+                                <button class="quantity-btn increase" data-id="${product.id}">+</button>
+                            </div>
+                        </td>
+                        <td class="product-subtotal">₹${itemTotal.toFixed(2)}</td>
+                        <td class="product-remove">
+                            <button class="remove-item" data-id="${product.id}"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    `;
+                    
+                    if (cartTableBody) cartTableBody.appendChild(cartRow);
+                });
+                
+                // Update summary
+                const discount = 0; // No discount for now
+                const total = subtotal - discount;
+                
+                if (cartSubtotal) cartSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
+                if (cartDiscount) cartDiscount.textContent = `₹${discount.toFixed(2)}`;
+                if (cartTotal) cartTotal.textContent = `₹${total.toFixed(2)}`;
+                
+                // Initialize quantity controls
+                initCartQuantityControls();
+                
+                // Initialize remove buttons
+                initRemoveButtons();
+            }
+            
+            // Initialize quantity controls in the cart
+            function initCartQuantityControls() {
+                const decreaseButtons = document.querySelectorAll('.cart-item .decrease');
+                const increaseButtons = document.querySelectorAll('.cart-item .increase');
+                const quantityInputs = document.querySelectorAll('.cart-item input[type="number"]');
+                
+                // Decrease quantity
+                decreaseButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        updateCartItemQuantity(id, -1);
+                    });
+                });
+                
+                // Increase quantity
+                increaseButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        updateCartItemQuantity(id, 1);
+                    });
+                });
+                
+                // Input change
+                quantityInputs.forEach(input => {
+                    input.addEventListener('change', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        const newQuantity = parseInt(this.value);
+                        
+                        if (newQuantity > 0) {
+                            const cartItem = cart.find(item => item.id === id);
+                            if (cartItem) {
+                                const change = newQuantity - cartItem.quantity;
+                                updateCartItemQuantity(id, change);
+                            }
+                        } else {
+                            this.value = 1; // Minimum quantity is 1
+                            updateCartItemQuantity(id, 0); // Reset to 1
+                        }
+                    });
+                });
+            }
+            
+            // Initialize remove buttons
+            function initRemoveButtons() {
+                const removeButtons = document.querySelectorAll('.remove-item');
+                
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        removeFromCart(id);
+                    });
+                });
+            }
+            
+            // Update cart item quantity
+            function updateCartItemQuantity(id, change) {
+                const cartItem = cart.find(item => item.id === id);
+                
+                if (cartItem) {
+                    cartItem.quantity += change;
+                    
+                    if (cartItem.quantity <= 0) {
+                        removeFromCart(id);
+                    } else {
+                        // Save cart to localStorage
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        
+                        // Update UI
+                        updateCartCount();
+                        renderCartItems();
+                    }
+                }
+            }
+            
+            // Remove item from cart
+            function removeFromCart(id) {
+                const newCart = cart.filter(item => item.id !== id);
+                
+                // Update cart
+                localStorage.setItem('cart', JSON.stringify(newCart));
+                
+                // Reload cart from localStorage
+                const updatedCart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.length = 0;
+                updatedCart.forEach(item => cart.push(item));
+                
+                // Update UI
+                updateCartCount();
+                renderCartItems();
+            }
+            
+            // Update cart button
+            if (updateCartBtn) {
+                updateCartBtn.addEventListener('click', function() {
+                    // In a real application, you might want to validate quantities or perform other checks
+                    showNotification('Cart updated successfully!');
+                });
+            }
+            
+            // Checkout button
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function(e) {
+                    if (cart.length === 0) {
+                        e.preventDefault();
+                        showNotification('Your cart is empty. Add some products first.');
+                    }
+                });
+            }
+            
+            // Render cart items on page load
+            renderCartItems();
+        });
+    </script>
+</body>
+</html> 

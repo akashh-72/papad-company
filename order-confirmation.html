@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Vaishali Sandage Papad Kendra</title>
+    <meta name="description" content="Thank you for your order at Vaishali Sandage Papad Kendra. Your order has been successfully placed.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Vaishali Sandage</h1>
+                        <p class="tagline">Papad Kendra</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Order Confirmation</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Order Confirmation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Confirmation Section -->
+        <section class="confirmation-section section-padding">
+            <div class="container">
+                <div class="confirmation-container">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="confirmation-message">
+                        <h2>Thank You for Your Order!</h2>
+                        <p>Your order has been successfully placed and is being processed.</p>
+                        <div class="order-details">
+                            <div class="order-info">
+                                <h3>Order Information</h3>
+                                <p><strong>Order Number:</strong> <span id="orderNumber">VSP-2023-1234</span></p>
+                                <p><strong>Order Date:</strong> <span id="orderDate">July 10, 2023</span></p>
+                                <p><strong>Payment Method:</strong> <span id="paymentMethod">Cash on Delivery</span></p>
+                                <p><strong>Shipping Method:</strong> Standard Shipping</p>
+                            </div>
+                            <div class="order-summary">
+                                <h3>Order Summary</h3>
+                                <p><strong>Subtotal:</strong> ₹650.00</p>
+                                <p><strong>Shipping:</strong> Free</p>
+                                <p><strong>Discount:</strong> ₹0.00</p>
+                                <p class="total"><strong>Total:</strong> ₹650.00</p>
+                            </div>
+                        </div>
+                        <div class="shipping-info">
+                            <h3>Shipping Address</h3>
+                            <p>John Doe</p>
+                            <p>123 Main Street, Apartment 4B</p>
+                            <p>Mumbai, Maharashtra 400001</p>
+                            <p>India</p>
+                            <p>Phone: +91 98765 43210</p>
+                        </div>
+                        <div class="confirmation-note">
+                            <p>A confirmation email has been sent to your email address. You can track your order status in the email.</p>
+                            <p>If you have any questions about your order, please contact our customer service team at <a href="mailto:info@vaishalipapads.com">info@vaishalipapads.com</a> or call us at +91 98765 43210.</p>
+                        </div>
+                        <div class="confirmation-actions">
+                            <a href="products.html" class="btn primary-btn">Continue Shopping</a>
+                            <a href="#" class="btn secondary-btn" id="printBtn">Print Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="recommended-products section-padding bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>You Might Also Like</h2>
+                    <p>Explore more of our authentic products</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/methi-papad.jpg" alt="Methi Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Methi Papad</h3>
+                            <p class="product-desc">Infused with fenugreek for unique flavor</p>
+                            <div class="product-purchase">
+                                <p class="price">₹140.00</p>
+                                <button class="add-to-cart" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/moong-papad.jpg" alt="Moong Dal Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Moong Dal Papad</h3>
+                            <p class="product-desc">Light and crispy papad made from moong dal</p>
+                            <div class="product-purchase">
+                                <p class="price">₹130.00</p>
+                                <button class="add-to-cart" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/cumin-sandage.jpg" alt="Cumin Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Cumin Sandage</h3>
+                            <p class="product-desc">Sandage with aromatic cumin seeds</p>
+                            <div class="product-purchase">
+                                <p class="price">₹160.00</p>
+                                <button class="add-to-cart" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/plain-sandage.jpg" alt="Plain Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Plain Sandage</h3>
+                            <p class="product-desc">Traditional plain sandage with authentic taste</p>
+                            <div class="product-purchase">
+                                <p class="price">₹150.00</p>
+                                <button class="add-to-cart" data-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section-padding bg-primary">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe to receive special offers, recipes, and updates on new products</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn white-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Market Street, Pune, Maharashtra, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@vaishalipapads.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget business-hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <div class="payment-methods">
+                        <p>We Accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vaishali Sandage Papad Kendra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Subtotal: <span>₹0.00</span></p>
+            </div>
+            <a href="cart.html" class="btn primary-btn">View Cart</a>
+            <a href="checkout.html" class="btn secondary-btn">Checkout</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate random order number
+            const orderNumber = document.getElementById('orderNumber');
+            if (orderNumber) {
+                const randomNum = Math.floor(10000 + Math.random() * 90000);
+                orderNumber.textContent = `VSP-${new Date().getFullYear()}-${randomNum}`;
+            }
+            
+            // Set current date
+            const orderDate = document.getElementById('orderDate');
+            if (orderDate) {
+                const now = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                orderDate.textContent = now.toLocaleDateString('en-US', options);
+            }
+            
+            // Print order functionality
+            const printBtn = document.getElementById('printBtn');
+            if (printBtn) {
+                printBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.print();
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

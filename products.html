@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Vaishali Sandage Papad Kendra</title>
+    <meta name="description" content="Browse our wide range of authentic Indian papads and sandage. Handcrafted with traditional recipes and premium ingredients.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Vaishali Sandage</h1>
+                        <p class="tagline">Papad Kendra</p>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="cart-icon">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                    </div>
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Our Products</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Products</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section section-padding">
+            <div class="container">
+                <!-- Filters and Categories -->
+                <div class="product-filters">
+                    <div class="filter-categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#" class="active" data-category="all">All Products</a></li>
+                            <li><a href="#" data-category="papad">Papads</a></li>
+                            <li><a href="#" data-category="sandage">Sandage</a></li>
+                            <li><a href="#" data-category="special">Special Items</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-sort">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by">
+                            <option value="popularity">Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="papad">
+                        <div class="product-image">
+                            <img src="images/products/rice-papad.jpg" alt="Rice Papad">
+                            <div class="product-tag">Bestseller</div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Rice Papad</h3>
+                            <p class="product-desc">Traditional rice papad with a crispy texture</p>
+                            <div class="product-purchase">
+                                <p class="price">₹120.00</p>
+                                <button class="add-to-cart" data-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="product-card" data-category="papad">
+                        <div class="product-image">
+                            <img src="images/products/udad-papad.jpg" alt="Udad Papad">
+                            <div class="product-tag">Popular</div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Udad Papad</h3>
+                            <p class="product-desc">Made with black gram for rich taste</p>
+                            <div class="product-purchase">
+                                <p class="price">₹150.00</p>
+                                <button class="add-to-cart" data-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="product-card" data-category="papad">
+                        <div class="product-image">
+                            <img src="images/products/garlic-papad.jpg" alt="Garlic Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Garlic Papad</h3>
+                            <p class="product-desc">Flavored with fresh garlic for extra taste</p>
+                            <div class="product-purchase">
+                                <p class="price">₹135.00</p>
+                                <button class="add-to-cart" data-id="3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="product-card" data-category="sandage">
+                        <div class="product-image">
+                            <img src="images/products/chilli-sandage.jpg" alt="Red Chilli Sandage">
+                            <div class="product-tag">New</div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Red Chilli Sandage</h3>
+                            <p class="product-desc">Spicy and flavorful traditional sandage</p>
+                            <div class="product-purchase">
+                                <p class="price">₹180.00</p>
+                                <button class="add-to-cart" data-id="4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="product-card" data-category="papad">
+                        <div class="product-image">
+                            <img src="images/products/methi-papad.jpg" alt="Methi Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Methi Papad</h3>
+                            <p class="product-desc">Infused with fenugreek for unique flavor</p>
+                            <div class="product-purchase">
+                                <p class="price">₹140.00</p>
+                                <button class="add-to-cart" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="product-card" data-category="papad">
+                        <div class="product-image">
+                            <img src="images/products/moong-papad.jpg" alt="Moong Dal Papad">
+                        </div>
+                        <div class="product-details">
+                            <h3>Moong Dal Papad</h3>
+                            <p class="product-desc">Light and crispy papad made from moong dal</p>
+                            <div class="product-purchase">
+                                <p class="price">₹130.00</p>
+                                <button class="add-to-cart" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 -->
+                    <div class="product-card" data-category="sandage">
+                        <div class="product-image">
+                            <img src="images/products/cumin-sandage.jpg" alt="Cumin Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Cumin Sandage</h3>
+                            <p class="product-desc">Sandage with aromatic cumin seeds</p>
+                            <div class="product-purchase">
+                                <p class="price">₹160.00</p>
+                                <button class="add-to-cart" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 8 -->
+                    <div class="product-card" data-category="sandage">
+                        <div class="product-image">
+                            <img src="images/products/plain-sandage.jpg" alt="Plain Sandage">
+                        </div>
+                        <div class="product-details">
+                            <h3>Plain Sandage</h3>
+                            <p class="product-desc">Traditional plain sandage with authentic taste</p>
+                            <div class="product-purchase">
+                                <p class="price">₹150.00</p>
+                                <button class="add-to-cart" data-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features -->
+        <section class="product-features section-padding bg-light">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>100% Natural</h3>
+                            <p>All our products are made with natural ingredients without any preservatives or artificial additives.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Handcrafted</h3>
+                            <p>Each product is handmade with care following traditional methods passed down through generations.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Fast Delivery</h3>
+                            <p>We ensure quick and safe delivery of our products to your doorstep across India.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Premium Quality</h3>
+                            <p>We use only the finest ingredients to ensure superior taste and quality in every bite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter section-padding bg-primary">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe to receive special offers, recipes, and updates on new products</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn white-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-widgets">
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="returns.html">Returns & Refunds</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget contact-info">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Market Street, Pune, Maharashtra, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@vaishalipapads.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget business-hours">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 5:00 PM</p>
+                    <p>Sunday: Closed</p>
+                    <div class="payment-methods">
+                        <p>We Accept:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vaishali Sandage Papad Kendra. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <p>Subtotal: <span>₹0.00</span></p>
+            </div>
+            <a href="cart.html" class="btn primary-btn">View Cart</a>
+            <a href="checkout.html" class="btn secondary-btn">Checkout</a>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Product filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryLinks = document.querySelectorAll('.filter-categories a');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide products based on category
+                    productCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Sorting functionality
+            const sortSelect = document.getElementById('sort-by');
+            
+            sortSelect.addEventListener('change', function() {
+                const sortValue = this.value;
+                const productGrid = document.querySelector('.product-grid');
+                const products = Array.from(productCards);
+                
+                // Sort products based on selected option
+                products.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.price').textContent.replace('₹', ''));
+                    const priceB = parseFloat(b.querySelector('.price').textContent.replace('₹', ''));
+                    
+                    if (sortValue === 'price-low') {
+                        return priceA - priceB;
+                    } else if (sortValue === 'price-high') {
+                        return priceB - priceA;
+                    }
+                    
+                    // For other sort options, we would need more data
+                    // For now, return 0 (no change)
+                    return 0;
+                });
+                
+                // Re-append sorted products to grid
+                products.forEach(product => {
+                    productGrid.appendChild(product);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
